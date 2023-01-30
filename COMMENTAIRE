@@ -1,0 +1,51 @@
+
+
+-Pour initialiser un projet REACT
+  il faut installer le package ' create-react-app.'
+  en faisant 'yarn create react-app my-app' dans le terminal
+-Si un message d'erreur apparait effectuer les commande suivante dans l'ordre dans le terminal:
+  chsh -s /bin/zsh
+  zsh
+  mkdir ~/.npm-global
+  npm config set prefix '~/.npm-global'
+  echo "" >> ~/.zshrc
+  echo "export PATH=~/.npm-global/bin:\$PATH" >> ~/.zshrc
+  source ~/.zshrc
+Une fois les commandes faites retaper la commande 'npm install -g yarn'
+Une fois le package installer un dossier 'my-app' est créé contenant tout le package.
+- Taper la commande 'cd my-app' dans le terminal pour ce trouver dans le bon dossier
+- Puis lancer le projet 'yarn start' dans le terminal
+
+.Supprimer le contenu du fichier src/App.css
+.Supprimer le contenu du fichier src/index.css
+.Supprimer le fichier src/logo.svg
+
+.Supprimer src/App.test.js
+.Supprimer src/setupTests.js
+.Supprimer src/reportWebVitals.js
+
+.dans src/index.js, il faudra supprimer l'import de reportWebVitals ainsi que son utilisation (ligne 5 et ligne 17)
+.Remplacer le contenu du fichier src/App.js par:
+  import "./App.css";
+function App() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  );
+}
+export default App;
+
+-Pour utiliser les raccourcis Emmet dans un projet React, 
+  il faut suivre les étapes suivantes :
+    .Dans VSCode, aller dans l’onglet Code => Preferences => Settings(paramètre en fr) (un menu s’ouvrira alors)
+      .Taper emmet dans la barre de recherche. Vous verrez alors apparaitre, la partie Emmet: Include Languages. Cliquer sur le bouton "Add Item".
+      .Ajouter une paire clé/valeur (Item/Value) : pour la clé, ajouter 'javascript', et pour la valeur, ajouter 'javascriptreact'.
+  Vous devriez alors avoir les lignes suivantes dans votre fichier settings.json :
+                    "emmet.includeLanguages": {
+                    "javascript": "javascriptreact"
+                      }
+Pour accéder au fichier settings.json :
+Cliquer sur l'onglet View(affichage en fr) puis sur Command Palette(palette de commande) (une barre de recherche s'ouvrira alors)
+Taper 'Preferences'. Vous verrez alors apparaitre plusieur Preferences séléctionner Preferences: Open settings (JSON). Cliquer dessus. Ceci aura pour effet d'ouvrir le fichier settings.json.
+
